@@ -33,7 +33,7 @@ seed = 0b0110
 state = seed
 print("{:04b}".format(seed))
 while True:
-    newbit = (state ^ (state) ^ (state >> 1)
+    newbit = (state ^ (state >> 1)
               ^ (state >> 2) ^ (state >> 3)) & 1
     state = (state >> 1) | (newbit << 3)
     print("{:04b}".format(state))
